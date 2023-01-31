@@ -30,6 +30,11 @@ const opt3 = document.getElementById('opt3')
 const opt4 = document.getElementById('opt4')
 const scr = document.getElementById('scr')
 const tot = document.getElementById('tot')
+const btn1 = document.getElementById('btn1')
+const btn2 = document.getElementById('btn2')
+const btn3 = document.getElementById('btn3')
+const btn4 = document.getElementById('btn4')
+
 var scoreCount = 0
 var questionCount = 0
 var qVal = "Question 1: Ex"
@@ -54,3 +59,25 @@ function assignQuestion(qTest) {
     ans = qArr[5];
     game.changeText();
 }
+
+btn1.addEventListener("click", function() {
+    guess=1;
+    scoreCount++;
+    game.changeText();
+  });
+
+btn2.addEventListener("click", function() {
+    guess=2;
+    scoreCount++;
+    game.changeText();
+  });
+  btn3.addEventListener("click", function() {
+    guess=3;
+    scoreCount++;
+    game.changeText();
+  });
+  btn4.addEventListener("click", function() {
+    guess=4;
+    scoreCount++;
+    game.changeText();
+  });
