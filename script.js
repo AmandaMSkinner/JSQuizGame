@@ -62,22 +62,30 @@ function assignQuestion(qTest) {
 
 btn1.addEventListener("click", function() {
     guess=1;
-    scoreCount++;
+    if(guess==ans){
+      scoreCount++;
+    }
     game.changeText();
   });
 
 btn2.addEventListener("click", function() {
     guess=2;
-    scoreCount++;
+    if(guess==ans){
+      scoreCount++;
+    }
     game.changeText();
   });
   btn3.addEventListener("click", function() {
     guess=3;
-    scoreCount++;
+    if(guess==ans){
+      scoreCount++;
+    }
     game.changeText();
   });
   btn4.addEventListener("click", function() {
     guess=4;
-    scoreCount++;
+    if(guess==ans){
+      scoreCount++;
+    }
     game.changeText();
   });
