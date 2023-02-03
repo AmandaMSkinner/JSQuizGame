@@ -51,7 +51,20 @@ var guess = 0
 var qindex = 0;
 
 const game = new GameMaker(question, opt1, opt2, opt3, opt4, scr, tot);
-var questTest = ["This Question came from the text file|TFO1|TFO2|TFO3|TFO4|1","Tees Question came from the text file|TFO1|TFO2|TFO3|TFO4|1"];
+
+//All Questions are from https://travelswithelle.com/other/multiple-choice-trivia-questions/
+var questTest = [
+  "How many Infinity Stones are there?|3|5|6|10|3",
+  "What 90's boyband member bought Myspace in 2011?|Nick Lachey|Justin Timberlake|Shawn Stockman|AJ McLean|2",
+  "What is the most visited tourist attraction in the world?|Eiffel Tower|Statue of Liberty|Great Wall of China|Colosseum|1",
+  "What is the name of Hagrid's pet spider?|Nigini|Crookshanks|Aragog|Mosag|3",
+  "What is the heaviest organ in the human body?|Brain|Liver|Skin|Heart|2",
+  "What element does the symbol AU stand for?|Silver|Magnesium|Salt|Gold|4",
+  "What is the highest-grossing Broadway show of all time?|The Lion King|Wicked|Kinky Boots|Hamilton|1",
+  "Which fast food restaurant has the largest number of retail locations in the world?|Jack in the Box|Chipotle|Subway|McDonalds|3",
+  "What is the oldest soft drink in the United States?|Coca Cola|Pepsi|Dr. Pepper|Canada Dry Ginger Ale|3",
+  "What is the name of the coffee shop in the sitcom Friends?|Central Perk|Java Park|Central Park Coffee|Central Park Roastery|1",
+];
 
 function shuffleQuestions(array) {
   var i = array.length,
@@ -73,8 +86,6 @@ function shuffleQuestions(array) {
 }
 
 shuffleQuestions(questTest);
-
-
 assignQuestion(questTest[0]);
 
 function assignQuestion(qTest) {
