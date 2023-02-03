@@ -22,6 +22,7 @@ class GameMaker {
         this.scr.innerText = "Score: " + scoreCount.toString()
         this.tot.innerText = "Questions: " + questionCount.toString()
     }
+    //https://www.wavsource.com/sfx/sfx.htm - Credit for Sounds
 }
 const question = document.getElementById('data-question')
 const opt1 = document.getElementById('opt1')
@@ -34,6 +35,10 @@ const btn1 = document.getElementById('btn1')
 const btn2 = document.getElementById('btn2')
 const btn3 = document.getElementById('btn3')
 const btn4 = document.getElementById('btn4')
+
+wrongSound = new Audio('explosion_x.wav')
+rightSound = new Audio('chime.wav')
+
 
 var scoreCount = 0
 var questionCount = 0
@@ -60,10 +65,31 @@ function assignQuestion(qTest) {
     game.changeText();
 }
 
+function wrongAns() {
+  wrongSound.play()
+  questionCount++
+  qVal="Incorrect!"
+  setTimeout(function() {
+    assignQuestion("This|1|2|3|4|1")
+}, (1000));
+}
+
+function rightAns(){
+  rightSound.play()
+  scoreCount++
+  questionCount++
+  qVal="Correct!"
+  setTimeout(function() {
+    assignQuestion("This|1|2|3|4|1")
+}, (1000));
+}
+
 btn1.addEventListener("click", function() {
     guess=1;
     if(guess==ans){
-      scoreCount++;
+      rightAns();
+    }else{
+      wrongAns();
     }
     game.changeText();
   });
@@ -71,21 +97,27 @@ btn1.addEventListener("click", function() {
 btn2.addEventListener("click", function() {
     guess=2;
     if(guess==ans){
-      scoreCount++;
+      rightAns();
+    }else{
+      wrongAns();
     }
     game.changeText();
   });
   btn3.addEventListener("click", function() {
     guess=3;
     if(guess==ans){
-      scoreCount++;
+      rightAns();
+    }else{
+      wrongAns();
     }
     game.changeText();
   });
   btn4.addEventListener("click", function() {
     guess=4;
     if(guess==ans){
-      scoreCount++;
+      rightAns();
+    }else{
+      wrongAns();
     }
     game.changeText();
   });
