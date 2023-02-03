@@ -117,9 +117,9 @@ function rightAns() {
 
 btn1.addEventListener("click", function () {
   guess = 1;
-  if (guess == ans) {
+  if (guess == ans&&qindex<questTest.length) {
     rightAns();
-  } else {
+  } else if(qindex<questTest.length){
     wrongAns();
   }
   game.changeText();
@@ -127,18 +127,18 @@ btn1.addEventListener("click", function () {
 
 btn2.addEventListener("click", function () {
   guess = 2;
-  if (guess == ans) {
+  if (guess == ans&&qindex<questTest.length) {
     rightAns();
-  } else {
+  } else if(qindex<questTest.length){
     wrongAns();
   }
   game.changeText();
 });
 btn3.addEventListener("click", function () {
   guess = 3;
-  if (guess == ans) {
+  if (guess == ans&&qindex<questTest.length) {
     rightAns();
-  } else {
+  } else if(qindex<questTest.length){
     wrongAns();
   }
   game.changeText();
@@ -146,9 +146,9 @@ btn3.addEventListener("click", function () {
 
 btn4.addEventListener("click", function () {
   guess = 4;
-  if (guess == ans) {
+  if (guess == ans&&qindex<questTest.length) {
     rightAns();
-  } else {
+  } else if(qindex<questTest.length){
     wrongAns();
   }
   game.changeText();
